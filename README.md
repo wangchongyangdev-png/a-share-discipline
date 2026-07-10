@@ -1,8 +1,22 @@
 # A 股趋势交易纪律 Skill
 
+Chinese-first Codex skill for A-share ETF trend discipline: evidence checks, market stage, position quality, and emotional-risk reminders.
+
 一个面向 Codex 的个人交易纪律助手，用于判断 A 股 ETF 为主、A 股短线趋势交易为辅的标的，是否符合一套可重复执行的短线趋势系统。
 
 它不预测“明天一定涨不涨”，也不输出“强烈买入”。它更关注：这是不是系统内交易、方向处于什么阶段、当前位置是否舒服，以及此刻最该做什么。
+
+## What it does / 它做什么
+
+`a-share-discipline` 是一个交易纪律助手，不是荐股工具。
+
+它会把一次交易判断拆成几件事：
+
+- 代码、价格、消息证据是否足够
+- 标的是主线、次主线、轮动、弱势，还是宽基不适配
+- 趋势处于启动、主升、调整、高位震荡，还是退潮
+- 当前位置是买点、持有点、减仓点、观察点，还是不是我的交易
+- 当前最容易犯的错误是追高、恐慌卖、怕卖飞，还是仓位失控
 
 ## 它解决什么问题
 
@@ -77,7 +91,7 @@
 
 ### 方式一：让 Codex 帮你安装
 
-在 Codex 里把这个仓库地址发给它，并说明要安装其中的 Skill：
+在 Codex 里把这个仓库地址发给它，并说明要安装这个 Skill：
 
 ```text
 请帮我安装这个 Codex Skill：
@@ -111,11 +125,40 @@ https://github.com/<你的 GitHub 用户名>/a-share-discipline
 $a-share-discipline 516510 现在是买点还是观察点？
 ```
 
+## 快速试用
+
+### 已知 ETF 代码
+
+```text
+$a-share-discipline 516510 现在是买点、持有点，还是观察点？请先核代码和当日价格证据。
+```
+
+### 截图为主
+
+```text
+$a-share-discipline 根据这张 ETF 日 K 截图分析：数据状态怎么分级？现在符不符合我的交易系统？
+```
+
+### 只有名称，没有代码
+
+```text
+$a-share-discipline 帮我看一下港股通创新药 ETF。先确认代码，再判断板块地位、趋势阶段和仓位动作。
+```
+
 ## 数据与风险提示
 
-此 Skill 是交易纪律和结构判断工具，不构成投资建议，也不能保证收益。
+此 Skill 是交易纪律和结构判断工具，不构成投资建议，也不能保证收益。Not investment advice.
 
 当用户问“今天”“最新”“消息驱动”等实时问题时，它会把代码、价格、消息拆开核验：证据不足时会明确降级为结构判断，不把截图或历史页面伪装成实时数据。
+
+## 发布前检查
+
+- 根目录存在 `SKILL.md`
+- `SKILL.md` 里的 `name` 是 `a-share-discipline`
+- `agents/openai.yaml` 的调用示例使用 `$a-share-discipline`
+- README 不再出现旧调用名
+- `.DS_Store` 没有被 Git 跟踪
+- GitHub About 和 Topics 已填写
 
 ## 贡献方向
 
