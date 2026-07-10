@@ -1,5 +1,5 @@
 ---
-name: a-share-trend-discipline
+name: a-share-discipline
 description: 用于判断 A 股 ETF 或短线交易是否符合你的交易系统，重点看系统适配度、板块地位、趋势阶段、买卖位置质量与情绪风险，不做长期价值投资分析，也不做“明天必涨”式荐股。
 ---
 

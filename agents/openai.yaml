@@ -1,0 +1,7 @@
+interface:
+  display_name: "A-Share Discipline"
+  short_description: "用中文判断这只 A 股 ETF 或短线交易是否符合我的交易系统"
+  default_prompt: "使用 $a-share-discipline 时，先核代码，再核价格，消息只在需要时补充。输出必须是中文优先、混合风格：先给紧凑的纪律卡片，再给几句人话判断。证据要明确，但不要停留在证据标签里；证据一旦够用，就迅速回答这是不是我的交易、现在该做什么、为什么不是另一个动作。用户已给 6 位代码时走快路径，不要重复演示查码流程，也不要暴露完整调试链路，除非受阻或被明确要求。"
+
+policy:
+  allow_implicit_invocation: true

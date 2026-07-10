@@ -65,29 +65,50 @@
 
 ## 安装
 
-本仓库采用“仓库根目录 + 同名 Skill 子目录”的结构：
+本仓库本身就是一个 Codex Skill，结构如下：
 
 ```text
 仓库根目录/
 ├── README.md
-└── a-share-trend-discipline/
+├── SKILL.md
+├── agents/
+└── references/
+```
+
+### 方式一：让 Codex 帮你安装
+
+在 Codex 里把这个仓库地址发给它，并说明要安装其中的 Skill：
+
+```text
+请帮我安装这个 Codex Skill：
+https://github.com/<你的 GitHub 用户名>/a-share-discipline
+```
+
+如果你的 Codex 环境支持从 GitHub 安装 Skill，它会把这个仓库作为一个 Skill 安装到本地 skills 目录中。
+
+### 方式二：手动安装
+
+下载或 clone 本仓库后，把整个仓库文件夹放到你的 Codex skills 目录，并命名为 `a-share-discipline`：
+
+```bash
+~/.codex/skills/a-share-discipline
+```
+
+最终目录应该类似：
+
+```text
+~/.codex/skills/
+└── a-share-discipline/
     ├── SKILL.md
+    ├── README.md
     ├── agents/
     └── references/
 ```
 
-发布到 GitHub 后，用户可以让 Codex 安装该 GitHub 路径，或在具备 Skill Installer 的环境中运行：
-
-```bash
-python ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --repo <你的 GitHub 用户名>/a-share-discipline \
-  --path a-share-trend-discipline
-```
-
-安装完成后，Skill 会在下一轮对话中可用。使用示例：
+安装完成后，重新开启一轮对话或刷新 Codex，Skill 就可以使用。调用示例：
 
 ```text
-$a-share-trend-discipline 516510 现在是买点还是观察点？
+$a-share-discipline 516510 现在是买点还是观察点？
 ```
 
 ## 数据与风险提示
