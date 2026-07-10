@@ -85,7 +85,9 @@ Chinese-first Codex skill for A-share ETF trend discipline: evidence checks, mar
 
 情绪提醒：别因为“怕错过主线”把观察点做成追高点。
 ```
-<img width="2940" height="1846" alt="6f96fc8dd3fe4bbc6987e120dc715abe" src="https://github.com/user-attachments/assets/ed59e6aa-c4bf-433e-aee8-0e449bf00db1" />
+
+<img width="85%" height="85%" alt="image" src="https://github.com/user-attachments/assets/fe9b9335-7785-48f0-aed0-15e8f233456f" />
+
 
 ## 安装
 
